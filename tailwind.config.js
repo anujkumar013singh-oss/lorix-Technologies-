@@ -1,0 +1,30 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontSize: {
+        'massive': 'clamp(4rem, 10vw, 12rem)',
+        'hero-sub': 'clamp(1.5rem, 4vw, 3rem)',
+      },
+      animation: {
+        'marquee': 'marquee 2s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'marquee-reverse': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+}
+
